@@ -1,12 +1,8 @@
 {
-  "name": "kb-bindings-ui",
+  "name": "mrcorpt-games-kb-bindings-ui",
   "description": "user interface for kb-bindings",
   "version": "0.3.3",
   "main": "bindings-ui.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:deathcap/kb-bindings-ui.git"
-  },
   "keywords": [
     "voxel",
     "keys",

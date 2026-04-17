@@ -8,7 +8,7 @@ module.exports = function(game, opts) {
 };
 
 module.exports.pluginInfo = {
-  loadAfter: ['voxel-debug', 'voxel-plugins-ui'], // optional to load after and reuse same gui
+  loadAfter: ['mrcorpt-games-debug', 'mrcorpt-games-plugins-ui'], // optional to load after and reuse same gui
   clientOnly: true
 };
 
@@ -23,8 +23,8 @@ function BindingsUI(game, opts) {
   this.gui = opts.gui;
   if (!this.gui) {
     if (game && game.plugins) {
-      if (game.plugins.get('voxel-debug')) this.gui = game.plugins.get('voxel-debug').gui;
-      else if (game.plugins.get('voxel-plugins-ui')) this.gui = game.plugins.get('voxel-plugins-ui').gui;
+      if (game.plugins.get('mrcorpt-games-debug')) this.gui = game.plugins.get('mrcorpt-games-debug').gui;
+      else if (game.plugins.get('mrcorpt-games-plugins-ui')) this.gui = game.plugins.get('mrcorpt-games-plugins-ui').gui;
     }
   }
   if (!this.gui) this.gui = new createDatgui.GUI();
@@ -54,7 +54,7 @@ function BindingsUI(game, opts) {
 }
 
 // cleanup key name - based on https://github.com/mikolalysenko/game-shell/blob/master/shell.js
-// TODO: refactor with game-shell? and voxel-engine?
+// TODO: refactor with game-shell? and mrcorpt-games-engine?
 var filtered_vkey = function(k) {
   if(k.charAt(0) === '<' && k.charAt(k.length-1) === '>') {
     k = k.substring(1, k.length-1)
@@ -82,7 +82,7 @@ BindingsUI.prototype.populate = function() {
   // get keybindings
   this.binding2Key = {};
   if (this.kb && this.kb.bindings) {
-    // voxel-engine with kb-bindings - stores key -> binding
+    // mrcorpt-games-engine with kb-bindings - stores key -> binding
     for (var key in this.kb.bindings) {
       var binding = this.kb.bindings[key];
       this.binding2Key[binding] = this.vkeyBracket2Bare[key] || key;
