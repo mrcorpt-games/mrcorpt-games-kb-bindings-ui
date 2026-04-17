@@ -30,4 +30,4 @@ In the GUI you can change the key for each binding. The changes take effect imme
 
 ## License
 
-MIT
+GNU GENERAL PUBLIC LICENSE
