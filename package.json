@@ -1,7 +1,7 @@
 {
   "name": "mrcorpt-games-kb-bindings-ui",
   "description": "user interface for kb-bindings",
-  "version": "0.3.3",
+  "version": "2.0.0",
   "main": "bindings-ui.js",
   "keywords": [
     "voxel",
