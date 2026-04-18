@@ -20,6 +20,5 @@
   "scripts": {
     "start": "beefy demo.js:bundle.js",
     "test": "echo 'No tests specified'"
-  },
-  "license": "MIT"
+  }
 }
