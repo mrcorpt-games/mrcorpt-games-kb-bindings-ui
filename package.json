@@ -15,7 +15,7 @@
   "devDependencies": {
     "kb-bindings": "^0.2.0",
     "interact": "^0.0.3",
-    "raf": "^2.0.4"
+    "raf": "^3.4.1"
   },
   "scripts": {
     "start": "beefy demo.js:bundle.js",
