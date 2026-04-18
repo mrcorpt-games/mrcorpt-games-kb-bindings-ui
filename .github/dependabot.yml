@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+  # Node.js / npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/" # adjust if you use subfolders like /frontend
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "mrcorptgame"
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "deps(npm)"
+    versioning-strategy: auto
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "deps(ci)"
